@@ -1,11 +1,30 @@
-import React from "react";
+import { useContext } from "react";
+import DictionaryContext from "../context/DictionaryContext";
+import LoadingGif from "../assets/loading.gif";
 
-function SearchResults({ data, notFound }) {
+function SearchResults() {
+  const { data, notFound, loading } = useContext(DictionaryContext);
   return (
     <div className="search-results-container">
       <h2>Search Results</h2>
-      {data.length === 0 && notFound === false ? null : notFound ? (
-        <h2 style={{ margin: "16px 0" }}>Not Found :(</h2>
+      {data.length === 0 &&
+      notFound === false &&
+      loading !== true ? null : notFound ? (
+        <h2
+          style={{
+            margin: "16px 0",
+            backgroundColor: "#ccc",
+            padding: "4px 16px",
+          }}
+        >
+          Not Found :(
+        </h2>
+      ) : loading ? (
+        <img
+          src={LoadingGif}
+          alt="loading-gif"
+          style={{ width: "50px", margin: "20px 50px" }}
+        />
       ) : (
         <>
           <p>
@@ -39,27 +58,3 @@ function SearchResults({ data, notFound }) {
 }
 
 export default SearchResults;
-
-// (
-//   <div className="search-results-container">
-//     <h3>Search Results</h3>
-//     <p>
-//       Word: <strong>{data.word ? data.word : "dfj"}</strong>
-//     </p>
-//     <div className="pronounciation-section">
-//       <p>Pronounciation:</p>
-//       {data.audio ? <audio controls src={data.audio}></audio> : "not"}
-//     </div>
-//     {data.meanings
-//       ? data.meanings.map((definition) => {
-//           return (
-//             <div className="word-meaning">
-//               <p>
-//                 Definition: <strong>{definition.definition}</strong>
-//               </p>
-//             </div>
-//           );
-//         })
-//       : ""}
-//   </div>
-// );

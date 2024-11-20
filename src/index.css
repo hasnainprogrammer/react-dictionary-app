@@ -9,6 +9,9 @@ body {
   line-height: 1.5;
   text-wrap: wrap;
 }
+h2 {
+  margin-bottom: 16px;
+}
 nav {
   width: 100%;
   background-color: rgb(238, 238, 238);
@@ -23,7 +26,7 @@ nav .logo {
 nav .links {
   margin-right: 50px;
 }
-nav .links a {
+nav .links .link {
   margin: 0 20px;
   font-size: 1.1rem;
   text-decoration: none;

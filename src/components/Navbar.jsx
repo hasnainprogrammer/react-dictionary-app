@@ -5,14 +5,16 @@ function Navbar() {
   return (
     <nav>
       <div className="logo">
-        <p>DictionaryApp</p>
+        <p>
+          <strong>KnowWords</strong>
+        </p>
       </div>
       <div className="links">
-        <Link to="/" style={{ margin: 0, padding: 0 }}>
-          <a href="/#">Home</a>
+        <Link to="/" className="link">
+          Home
         </Link>
-        <Link to="/about" style={{ margin: 0, padding: 0 }}>
-          <a href="/#">About</a>
+        <Link to="/about" className="link">
+          About
         </Link>
       </div>
     </nav>
