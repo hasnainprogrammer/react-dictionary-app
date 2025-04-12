@@ -5,10 +5,7 @@ function About() {
   return (
     <div className="about-section">
       <div className="personal-info">
-        <img src={MyImage} alt="my-image" />
-        <p>
-          <i>Hasnain</i>
-        </p>
+        <h2>About knowWords</h2>
       </div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut placeat illo

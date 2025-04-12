@@ -15,6 +15,7 @@ function SearchResults() {
             margin: "16px 0",
             backgroundColor: "#ccc",
             padding: "4px 16px",
+            textAlign: "center",
           }}
         >
           Not Found :(
@@ -23,7 +24,7 @@ function SearchResults() {
         <img
           src={LoadingGif}
           alt="loading-gif"
-          style={{ width: "50px", margin: "20px 50px" }}
+          style={{ width: "100px", margin: "20px 50px" }}
         />
       ) : (
         <>
